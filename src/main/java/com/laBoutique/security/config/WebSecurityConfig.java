@@ -1,5 +1,6 @@
 package com.laBoutique.security.config;
 
+import com.laBoutique.appuser.AppUserRole;
 import com.laBoutique.appuser.AppuserService;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -25,11 +26,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/", "index", "/css/*", "/js/*").permitAll()
-                .antMatchers("/api/v*/registration/**")
-                .permitAll()
+                .antMatchers("/api/v*/registration/**").hasRole(AppUserRole.ADMIN.name())
+               // .permitAll()
                 .anyRequest()
                 .authenticated().and()
                 .formLogin()
+                .defaultSuccessUrl("/main",true)
                 .and()
                 .logout()
                 .logoutUrl("/logout")
