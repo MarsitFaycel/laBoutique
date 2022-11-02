@@ -1,0 +1,4 @@
+INSERT INTO public.app_user (
+id, app_user_role, email, enabled, first_name, last_name,locked, password) VALUES (
+'1', 'ADMIN', 'admin@gmail.c', true, 'admin', 'admin',false, '$2y$10$flz4sP.Md/b3AYnD9AXOqu5xOqiKExhLaXQRCoOx59odRtDbyBIu2')
+ returning id;
