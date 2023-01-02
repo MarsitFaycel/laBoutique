@@ -1,5 +1,10 @@
 databaseChangeLog:
   - include:
+      file: db/changelog/userSequence.xml
+  - include:
       file: db/changelog/appUser.xml
   - include:
+      file: db/changelog/productSequence.xml
+  - include:
       file: db/changelog/product.xml
+
