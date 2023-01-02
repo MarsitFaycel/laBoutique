@@ -9,7 +9,6 @@ import java.util.Date;
 @Entity
 @Getter
 @Setter
-
 public class Product {
 
     @SequenceGenerator(

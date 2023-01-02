@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<div> All products</div>
+<a href="/product/edit">edit product</a>
+<table>
+    <thead>
+    <tr>
+        <th> Name</th>
+        <th> Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${products == null}">
+        <td colspan="2"> No products Available</td>
+    </tr>
+    <tr th:each="book : ${products}">
+        <td><span th:text="${book.name}"> Title </span></td>
+        <td><span th:text="${book.price}"> 12.02 </span></td>
+    </tr>
+    </tbody>
+</table>
+
+</html>

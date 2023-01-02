@@ -11,17 +11,17 @@
         </preConditions>
 
         <createTable tableName="product">
-            <column name="id" type="int">
+            <column name="id" type="int" valueSequenceNext="product_sequence">
                 <constraints primaryKey="true"/>
             </column>
             <column name="name" type="varchar(255)"> </column>
             <column name="reference" type="varchar(255)"> </column>
             <column name="slug" type="varchar(255)"> </column>
             <column name="price" type="float"> </column>
-            <column name="createdDate" type="date"> </column>
-            <column name="createdBy" type="varchar(255)"> </column>
-            <column name="modifiedDate" type="date"> </column>
-            <column name="modifiedBy" type="varchar(255)"> </column>
+            <column name="created_date" type="date"> </column>
+            <column name="created_by" type="varchar(255)"> </column>
+            <column name="modified_date" type="date"> </column>
+            <column name="modified_by" type="varchar(255)"> </column>
 
 
 
