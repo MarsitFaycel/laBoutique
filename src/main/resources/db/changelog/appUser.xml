@@ -11,10 +11,10 @@
         </preConditions>
 
         <createTable tableName="app_user">
-            <column name="id" type="int">
+            <column name="id" type="int" valueSequenceNext="user_sequence">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="first_name" type="varchar(255)"> </column>
+            <column name="first_name" type="varchar(255)" > </column>
             <column name="last_name" type="varchar(255)"> </column>
             <column name="email" type="varchar(255)"> </column>
             <column name="password" type="varchar(500)"> </column>
@@ -23,6 +23,7 @@
             <column name="enabled" type="boolean"> </column>
 
         </createTable>
+
         <loadUpdateData
                 encoding="UTF-8"
                 file="db/data/appUser.csv"
