@@ -25,11 +25,11 @@ public class ProductController {
     }
     @GetMapping("/edit")
     public String greetingForm(Model model) {
-        model.addAttribute("product", new Product());
+        model.addAttribute("product", new ProductDTO());
         return "editProduct";
     }
     @PostMapping("/edit")
-    public RedirectView  greetingSubmit(@ModelAttribute Product product, Model model) {
+    public RedirectView  greetingSubmit(@ModelAttribute ProductDTO product, Model model) {
         model.addAttribute("product", product);
         productService.save(product);
         return new RedirectView("/product/all");

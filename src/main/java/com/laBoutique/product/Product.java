@@ -4,7 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.Instant;
+
 
 @Entity
 @Getter
@@ -26,9 +27,11 @@ public class Product {
     private String reference;
     private String slug;
     private float price;
-    private Date createdDate;
+    private Instant createdDate;
     private String createdBy;
-    private Date modifiedDate;
+    private Instant modifiedDate;
     private String modifiedBy;
+
+
 
 }
