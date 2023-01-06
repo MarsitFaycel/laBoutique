@@ -15,9 +15,7 @@ export class AuthServerProvider {
 
   login(credentials: Login): Observable<void> {
     return this.http.post<any>(
-      this.applicationConfigService.getEndpointFor(
-        'http://localhost:8080/login'
-      ),
+      this.applicationConfigService.getEndpointFor('/login'),
       credentials
     );
   }

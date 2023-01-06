@@ -36,3 +36,6 @@ spring:
           writetimeout: 5000
   liquibase:
     change-log: classpath:db/changelog/master.yaml
+
+allowed:
+  origin: http://localhost:4200
